@@ -8,9 +8,9 @@ Map TCP/UDP ports for your game server(s). Map as many as needed. (Default is 25
 
 Map the following Variables as needed. (The following are defaulted variables)
 
-MC_DAEMON_ID="1"
-MC_DAEMON_PW="ChangeMe"
-MC_FTP_IP=""
-MC_FTP_PORT="21"
-MC_FTP_SERVER="y"
-MC_KEY=""
+- MC_DAEMON_ID="1"
+- MC_DAEMON_PW="ChangeMe"
+- MC_FTP_IP=""
+- MC_FTP_PORT="21"
+- MC_FTP_SERVER="y"
+- MC_KEY=""
