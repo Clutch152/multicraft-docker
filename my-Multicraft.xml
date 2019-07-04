@@ -1,0 +1,71 @@
+<Container version="2">
+	<Name>Multicraft</Name>
+	<Repository>clutch152/multicraft</Repository>
+	<Registry/>
+	<Network>bridge</Network>
+	<MyIP/>
+	<Shell>sh</Shell>
+	<Privileged>false</Privileged>
+	<Support/>
+	<Project/>
+	<Overview/>
+	<Category/>
+	<WebUI>http://[IP]:[PORT:8057]</WebUI>
+	<TemplateURL/>
+	<Icon>
+		https://pbs.twimg.com/profile_images/715112608098029568/KmmE7Uy3.jpg
+	</Icon>
+	<ExtraParams/>
+	<PostArgs/>
+	<CPUset/>
+	<DateInstalled>1562240411</DateInstalled>
+	<DonateText/>
+	<DonateLink/>
+	<Description/>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>8057</HostPort>
+				<ContainerPort>80</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+			<Port>
+				<HostPort>25565</HostPort>
+				<ContainerPort>25565</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+			<Port>
+				<HostPort>25565</HostPort>
+				<ContainerPort>25565</ContainerPort>
+				<Protocol>udp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>/mnt/user/appdata/mc</HostDir>
+			<ContainerDir>/mc</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Environment>
+		<Variable>
+			<Value>ChangeMe</Value>
+			<Name>MC_DAEMON_PW</Name>
+			<Mode/>
+		</Variable>
+		<Variable>
+			<Value></Value>
+			<Name>MC_KEY</Name>
+			<Mode/>
+		</Variable>
+	</Environment>
+	<Labels/>
+	<Config Name="Multicraft Container Path" Target="/mc" Default="/mnt/user/appdata/mc" Mode="rw" Description="Container Path: /mc" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mc</Config>
+	<Config Name="Web Port" Target="80" Default="8057" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8057</Config>
+	<Config Name="Game Port 1 (TCP)" Target="25565" Default="25565" Mode="tcp" Description="Container Port: 25565" Type="Port" Display="always" Required="true" Mask="false">25565</Config>
+	<Config Name="Game Port 1 (UDP)" Target="25565" Default="25565" Mode="udp" Description="Container Port: 25565" Type="Port" Display="always" Required="true" Mask="false">25565</Config>
+	<Config Name="Daemon Password" Target="MC_DAEMON_PW" Default="ChangeMe" Mode="" Description="Container Variable: MC_DAEMON_PW" Type="Variable" Display="always" Required="false" Mask="false">ChangeMe</Config>
+	<Config Name="MC Key" Target="MC_KEY" Default="" Mode="" Description="Container Variable: MC_KEY" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+</Container>
